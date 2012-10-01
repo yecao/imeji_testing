@@ -66,6 +66,7 @@ public class Selenium2Example {
 		WebElement loginSubmitButton = driver.findElement(By
 				.id("formular:Header:lnkLogin"));
 		loginSubmitButton.click();
+		//2.go to admin page
 
 	}
 }
