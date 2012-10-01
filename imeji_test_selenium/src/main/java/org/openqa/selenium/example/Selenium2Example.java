@@ -66,7 +66,27 @@ public class Selenium2Example {
 		WebElement loginSubmitButton = driver.findElement(By
 				.id("formular:Header:lnkLogin"));
 		loginSubmitButton.click();
+//		TODO verify psw wrong, show HTTP Status 404 ?
 		//2.go to admin page
-
+		
+		//driver.get(imeji_instance_url + "imeji/");
+		driver.findElement(By.id("formular:Header:lnkAdmin")).click();
+		//3. go to create new user
+		driver.findElement(By.linkText("Create new User")).click();
+//		4. create user (send an email selected)
+		driver.findElement(By.id("formular:inputEmailText")).clear();
+		driver.findElement(By.id("formular:inputEmailText")).sendKeys("bobcaonjut@gmail.com");
+		driver.findElement(By.id("formular:inputNameText")).clear();
+		driver.findElement(By.id("formular:inputNameText")).sendKeys("Cao");
+		driver.findElement(By.id("formular:inputNickText")).clear();
+		driver.findElement(By.id("formular:inputNickText")).sendKeys("Ye_test");
+//		Send an email checked
+		driver.findElement(By.name("formular:j_id108")).click();
+//		save
+		driver.findElement(By.name("formular:j_id114")).click();
+//	    TODO verify a) page display: User created successfully. 
+//	    b)Username already exists. please choose another one. 
+//		5. login with new user (via email link) TODO hard to implement?
+//		6.change password
 	}
 }
