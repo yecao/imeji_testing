@@ -85,7 +85,9 @@ public class Selenium2Example {
 		driver.findElement(By.id("uploader_browse")).click();
 		driver.findElement(By.id("p178ejergv1hvef53160s1tajilq0_html5")).clear();
 //		TODO how to select image/ HTML5 drag image?
+//		remotewebdriver http://stackoverflow.com/questions/8851051/selenium-webdriver-and-browsers-select-file-dialog
 		driver.findElement(By.id("p178ejergv1hvef53160s1tajilq0_html5")).sendKeys("");
+		//now click the button to finish
 		driver.findElement(By.linkText("Start upload")).click();
 		//TODO verify success text on page:e.g., 1 files uploaded successfully: 20120827_135439 (Small).jpg
 
@@ -132,6 +134,7 @@ public class Selenium2Example {
 		// TODO verify a) page display: User created successfully.
 		// b)Username already exists. please choose another one.
 		// 5. login with new user (via email link) TODO hard to implement?
+//		http://www.seleniumtests.com/2011/08/verify-email-confirmation-using.html
 		// 6.change password
 	}
 
