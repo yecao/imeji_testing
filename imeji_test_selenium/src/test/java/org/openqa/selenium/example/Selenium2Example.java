@@ -86,6 +86,8 @@ public class Selenium2Example {
 		driver.findElement(By.id("p178ejergv1hvef53160s1tajilq0_html5")).clear();
 //		TODO how to select image/ HTML5 drag image?
 //		remotewebdriver http://stackoverflow.com/questions/8851051/selenium-webdriver-and-browsers-select-file-dialog
+//		input field http://sauceio.com/index.php/2012/03/selenium-tips-uploading-files-in-remote-webdriver/
+//		js upload   http://www.muranosoft.com/Outsourcingblog/Upload-File-With-Selenium.aspx
 		driver.findElement(By.id("p178ejergv1hvef53160s1tajilq0_html5")).sendKeys("");
 		//now click the button to finish
 		driver.findElement(By.linkText("Start upload")).click();
